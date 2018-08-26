@@ -1,14 +1,21 @@
-import React, { Component } from 'react';
+import React from 'react';
+import Layout from './hoc/layout'
+import Home from './components/home'
+import PopupHandler from './components/popupHandler'
 
 
-class App extends Component {
-  render() {
-    return (
-      <div>
-        Hello from react
-      </div>
-    );
-  }
-}
 
-export default App;
+const App = (props) => (
+
+	<div>
+		{props.isPopupActive && <PopupHandler/>}
+		<Layout>
+			<Home/>
+		</Layout>
+	</div>
+
+)	
+	
+
+
+export default App
