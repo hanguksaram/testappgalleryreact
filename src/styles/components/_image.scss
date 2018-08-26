@@ -71,8 +71,14 @@
 
 
 @media only screen and (max-width: $desktop-breakpoint) {
-    .image__overlay, .image__overlay__btn {
+    .image__overlay {
+        top: $l-size;
         display: block;
+    }
+    .image__overlay__btn {
+        display: block;
+        top: calc(50% + 1.6rem / 2);
+        
         }       
     .image__container:hover .image__overlay__btn {
         transform: translate(-50%, 0);
@@ -85,6 +91,7 @@
     }
     .image__header {
         justify-content: center;
+        height: $l-size;
         button {
            display:  none;
         }
