@@ -69,3 +69,24 @@
    
 }
 
+
+@media only screen and (max-width: $desktop-breakpoint) {
+    .image__overlay, .image__overlay__btn {
+        display: block;
+        }       
+    .image__container:hover .image__overlay__btn {
+        transform: translate(-50%, 0);
+    }
+    .image__container:hover .image__overlay {
+        opacity: 0.2
+    }
+    .image__container {
+        width: 80%;
+    }
+    .image__header {
+        justify-content: center;
+        button {
+           display:  none;
+        }
+    }
+}

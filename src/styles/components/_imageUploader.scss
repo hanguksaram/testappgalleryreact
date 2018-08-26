@@ -56,3 +56,34 @@
            
         }
 }
+@media only screen and (max-width: $desktop-breakpoint) {
+    .imageUploader__container {
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        form {
+            height: 25%;
+            width: 100%;
+            .imageUploader__inputWrapper {
+                margin: $s-size;
+            }
+            .imageUploader__btnSection {
+                flex: 0 0 35%;
+                flex-direction: column;
+                margin-top: $l-size;
+                input {
+                    flex: 0 0 45%;
+                }
+                input:first-child {
+                    order: 2;
+                    margin: 0;
+
+                }
+
+            }
+        
+        }
+    }
+}
