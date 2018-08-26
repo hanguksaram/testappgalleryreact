@@ -1,4 +1,6 @@
 import React from 'react'
+import { connect } from 'react-redux'
+import { removeImage } from '../../actions/images'
 
 const Image = (props) => (
 
@@ -11,4 +13,9 @@ const Image = (props) => (
 )
             
 
-export default Image
+const mapDispatchToProps = (dispatch) => {
+    return {
+        removeImage: (id) => {dispatch(removeImage(id))}
+    }
+}
+export default connect(null, mapDispatchToProps)(Image);

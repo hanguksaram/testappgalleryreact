@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import { closePopup } from '../../actions/popup'
+import { addImage } from '../../actions/images'
+import { connect } from 'react-redux'
 
 class ImageUploader extends Component {
        
@@ -11,5 +14,18 @@ class ImageUploader extends Component {
     }
 }
 
+const mapStateToProps = (state) => (
+    {
+        galleryLength: state.images.length
+    }
+)
+const mapDispatchToProps = (dispatch) => (
+    {
+        closePopup: () => (dispatch(closePopup())),
+        addImage: (image) => (dispatch(addImage(image)))
 
-export default ImageUploader;
+    }
+)
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(ImageUploader);
