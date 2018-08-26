@@ -167,6 +167,12 @@ module.exports = {
                 },
               },
               {
+                loader: require.resolve('sass-loader'),
+                options: {
+                  sourceMap: true
+                }
+              },
+              {
                 loader: require.resolve('postcss-loader'),
                 options: {
                   // Necessary for external CSS imports to work
