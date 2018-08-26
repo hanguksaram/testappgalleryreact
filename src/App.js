@@ -2,6 +2,7 @@ import React from 'react';
 import Layout from './hoc/layout'
 import Home from './components/home'
 import PopupHandler from './components/popupHandler'
+import { connect } from 'react-redux'
 
 
 
@@ -17,5 +18,12 @@ const App = (props) => (
 )	
 	
 
+const mapStateToProps = (state) => (
+	{
+		isPopupActive: state.popup.isOpen
+	}
+)
 
-export default App
+
+
+export default connect(mapStateToProps, null)(App);

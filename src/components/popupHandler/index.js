@@ -3,7 +3,7 @@ import ImageUploader from '../popups/imageUploader'
 
 const PopupHandler = () => {
     return (
-        <div>
+        <div className="popupHandler">
             <ImageUploader/>
         </div>
     );
