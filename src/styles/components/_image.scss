@@ -1,0 +1,99 @@
+.image__container {
+    
+    border: 1px solid #c7c7c7;
+    margin: $s-size 0 $s-size 0;
+    overflow: hidden;
+    position: relative;
+    width: 75%;
+    img {
+        display: block;
+        height: auto;
+        width: 100%;
+    }
+}
+
+
+.image__header {
+    align-items: center;
+    display: flex;
+    height: $xxl-size;
+    justify-content: space-between;
+    padding: $m-size $l-size;
+
+    .image__title {
+        font-weight: 600;
+    }
+    .image__title::first-letter {
+        text-transform: capitalize;
+    }
+    
+    button {
+        background: none;
+        border: none;
+        color: red;
+    }
+    button:hover {
+        background: red;
+        color: #fff;
+    }
+}
+
+.image__overlay {
+    background-color: red;
+    display: none;
+    position: absolute;
+    top: $xxl-size;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+}
+.image__overlay__btn {
+    
+    position: absolute;
+    top: calc(50% + 3.2rem / 2);
+    left: 50%;
+    transform: translate(-50%, 1000%);
+    transition: .5s ease;
+    display: none;
+    
+    button {
+        background: none;
+        border: none;
+        color: red;
+        font-weight: 600;
+    }
+   
+   
+}
+
+
+@media only screen and (max-width: $desktop-breakpoint) {
+    .image__overlay {
+        top: $l-size;
+        display: block;
+    }
+    .image__overlay__btn {
+        display: block;
+        top: calc(50% + 1.6rem / 2);
+        
+        }       
+    .image__container:hover .image__overlay__btn {
+        transform: translate(-50%, 0);
+    }
+    .image__container:hover .image__overlay {
+        opacity: 0.2
+    }
+    .image__container {
+        width: 80%;
+    }
+    .image__header {
+        justify-content: center;
+        height: $l-size;
+        button {
+           display:  none;
+        }
+    }
+}

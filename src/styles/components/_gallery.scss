@@ -1,0 +1,32 @@
+.gallery__container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: $xxl-size;
+}
+.gallery__wrapper {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    
+}
+.gallery__addImageBtn {
+    background: none;
+    border: 1px solid #00ff7f;
+    border-radius: 5px;
+    color: #00ff7f;
+    margin-top: 1.2rem;
+    padding: $s-size $l-size;
+    position: fixed;
+    z-index: 2;
+}
+.gallery__addImageBtn:hover {
+    background: #00ff7f;
+    color: #fff;
+}
+@media only screen and (max-width: $desktop-breakpoint) {
+    .gallery__addImageBtn {
+        width: 80%;
+    }
+}

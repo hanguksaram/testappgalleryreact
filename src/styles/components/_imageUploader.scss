@@ -1,0 +1,89 @@
+.imageUploader__container {
+    background: white;
+    height: 300px;
+    width: 300px;
+    
+    form {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: space-evenly;
+
+        .imageUploader__inputWrapper {
+            flex: 0 0 15%;
+            width: 60%;
+            input {
+                font-size: $m-size;
+                padding-left: $s-size;
+                height: 100%;
+                width: 100%;
+                
+                }
+            }
+        .imageUploader__btnSection {
+            display: flex;
+            flex: 0 0 12%;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 60%;
+
+                input {
+                    background: none;
+                    border-radius: 5px;
+                    font-weight: 600;
+                    flex: 1 1 33%;
+                    }
+                input:first-child {
+                    border: 1px solid black;
+                    margin-right: $s-size;
+                    }
+                input:first-child:hover {
+                    background: black;
+                    color: #fff;
+                        }
+                input:last-child {
+                    border: 1px solid #00ff7f;
+                    color: #00ff7f;
+
+                }
+                input:last-child:hover {
+                    background: #00ff7f;
+                    color: #fff;
+                }
+
+            }
+           
+        }
+}
+@media only screen and (max-width: $desktop-breakpoint) {
+    .imageUploader__container {
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        form {
+            height: 25%;
+            width: 100%;
+            .imageUploader__inputWrapper {
+                margin: $s-size;
+            }
+            .imageUploader__btnSection {
+                flex: 0 0 35%;
+                flex-direction: column;
+                margin-top: $l-size;
+                input {
+                    flex: 0 0 45%;
+                }
+                input:first-child {
+                    order: 2;
+                    margin: 0;
+
+                }
+
+            }
+        
+        }
+    }
+}
